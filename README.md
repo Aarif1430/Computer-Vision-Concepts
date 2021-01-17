@@ -49,3 +49,8 @@ else:
 Original Image             |  Noisy Image
 :-------------------------:|:-------------------------:
 ![](/data/gray_img.png)  |  ![](/data/noisy_img.png)
+
+## Image Derivatives & Averages
+
+- Derivative in two dimensions
+![](/data/derivative_in_2d.png)
