@@ -53,4 +53,5 @@ Original Image             |  Noisy Image
 ## Image Derivatives & Averages
 
 - Derivative in two dimensions
+
 ![](/data/derivative_in_2d.png)
