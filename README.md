@@ -29,5 +29,7 @@ gaussian = np.random.normal(mean, std, img_gray.shape)
 sns.distplot(gaussian, fit=stats.norm, kde=True)
 plt.show()
 ```
+
 The pdf of gaussian noise:
+
 ![](/data/gauss_pdf.png)
