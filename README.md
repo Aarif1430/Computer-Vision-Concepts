@@ -30,4 +30,4 @@ sns.distplot(gaussian, fit=stats.norm, kde=True)
 plt.show()
 ```
 The pdf of gaussian noise:
-![](/data/gauss_pdf.jpg)
+![](/data/gauss_pdf.png)
