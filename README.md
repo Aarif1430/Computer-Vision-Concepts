@@ -33,3 +33,17 @@ plt.show()
 The pdf of gaussian noise:
 
 ![](/data/gauss_pdf.png)
+
+```python
+rdn = random.random()
+if rdn < prob:
+    output[i][j] = 0
+elif rdn > thres:
+    output[i][j] = 255
+else:
+    output[i][j] = image[i][j]
+```
+
+Original Image             |  RGB Distribution
+:-------------------------:|:-------------------------:
+![](/data/gray_img.png)  |  ![](/data/noisy_img.png)
