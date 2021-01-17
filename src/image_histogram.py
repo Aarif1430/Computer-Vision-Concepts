@@ -11,11 +11,13 @@ img = cv2.imread('../data/Lenna.jpg')
 
 ################### Add noise to Image ##########################
 # Convert to gray scale
-def sp_noise(image,prob):
-    '''
+
+
+def sp_noise(image, prob):
+    """
     Add salt and pepper noise to image
     prob: Probability of the noise
-    '''
+    """
     output = np.zeros(image.shape,np.uint8)
     thres = 1 - prob
     for i in range(image.shape[0]):

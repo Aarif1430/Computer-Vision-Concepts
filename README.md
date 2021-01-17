@@ -32,6 +32,8 @@ plt.show()
 
 The pdf of gaussian noise:
 
+<img src="https://latex.codecogs.com/gif.latex?\bg_white&space;n(x,y)=&space;e^{\frac{-n^2}{2\sigma^2}}" title="n(x,y)= e^{\frac{-n^2}{2\sigma^2}}" />
+
 ![](/data/gauss_pdf.png)
 
 ```python
@@ -44,6 +46,6 @@ else:
     output[i][j] = image[i][j]
 ```
 
-Original Image             |  RGB Distribution
+Original Image             |  Noisy Image
 :-------------------------:|:-------------------------:
 ![](/data/gray_img.png)  |  ![](/data/noisy_img.png)
