@@ -16,7 +16,9 @@ Original Image             |  RGB Distribution
 ![](/data/Lenna.jpg)  |  ![](/data/lenna_rgb.png)
 
 ## Image Noise
-- $`\I(x,y)`$ = The true pixel values
-- $`\n(x,y)`$ = The noise at pixel (x,y)
 
-$`I^\hat(x,y)`$ = $`\I(x,y)`$ + $`\n(x,y)`$
+- I(x,y) = The true pixel values
+- n(x,y) = The noise at pixel (x,y)
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{I}(x,y)&space;=&space;I(x,y)&space;&plus;&space;n(x,y)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{I}(x,y)&space;=&space;I(x,y)&space;&plus;&space;n(x,y)" title="\hat{I}(x,y) = I(x,y) + n(x,y)" /></a>
+
