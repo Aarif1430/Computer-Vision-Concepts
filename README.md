@@ -32,11 +32,11 @@ plt.show()
 
 The pdf of gaussian noise:
 
-    <img src="https://latex.codecogs.com/gif.latex?\bg_white&space;n(x,y)=&space;e^{\frac{-n^2}{2\sigma^2}}" title="n(x,y)= e^{\frac{-n^2}{2\sigma^2}}" />
-    
-    <img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\large&space;g(x,y)&space;=&space;e^{\frac&space;{-(x^2&space;&plus;&space;y^2)}{2&space;\sigma&space;^2}}" title="\large g(x,y) = e^{\frac {-(x^2 + y^2)}{2 \sigma ^2}}" />
-    
-    ![](/data/gauss_pdf.png) ![](/data/gauss_2d.png)  
+  <img src="https://latex.codecogs.com/gif.latex?\bg_white&space;n(x,y)=&space;e^{\frac{-n^2}{2\sigma^2}}" title="n(x,y)= e^{\frac{-n^2}{2\sigma^2}}" />
+  
+  <img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\large&space;g(x,y)&space;=&space;e^{\frac&space;{-(x^2&space;&plus;&space;y^2)}{2&space;\sigma&space;^2}}" title="\large g(x,y) = e^{\frac {-(x^2 + y^2)}{2 \sigma ^2}}" />
+  
+  ![](/data/gauss_pdf.png) ![](/data/gauss_2d.png)  
 
 ```python
 rdn = random.random()
