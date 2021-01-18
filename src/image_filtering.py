@@ -32,6 +32,21 @@ def sp_noise(image, prob):
     return output
 
 
+def plot_gaussian_2d():
+    x = np.linspace(-10, 10, num=100)
+    y = np.linspace(-10, 10, num=100)
+
+    x, y = np.meshgrid(x, y)
+
+    z = np.exp(-0.1 * x ** 2 - 0.1 * y ** 2)
+
+    fig = plt.figure()
+    ax = fig.add_subplot(111, projection='3d')
+    ax.plot_surface(x, y, z, cmap=cm.jet)
+    plt.savefig('../data/gauss_2d.png')
+    plt.show()
+
+
 mean = 0.0
 var = 0.1
 sigma = var**0.5
@@ -44,3 +59,4 @@ plt.savefig('../data/gauss_pdf.png')
 new_img = img_gray + gaussian
 noise_img = sp_noise(img_gray, 0.05)
 cv2.imwrite('../data/noisy_img.png', noise_img)
+plot_gaussian_2d()

@@ -3,5 +3,6 @@ import cv2
 import numpy as np
 import seaborn as sns
 from scipy import stats
+from matplotlib import cm
 import random
 sns.set()
