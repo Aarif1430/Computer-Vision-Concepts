@@ -83,12 +83,12 @@ Original Image             |  Noisy Image
                   rc = kernel * padded_image[r:x+r, c:y+c]
                   result[r, c] = rc.sum()
       return result
-      kernel = (1/25)*np.ones((15,15))
-      print(kernel.shape)
-      img = cv2.imread('../data/gray_img.png')
-      img_gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
-      plt.imshow(convol2d(img_gray, kernel))
-      plt.savefig('../data/blurred_image')
+  kernel = (1/25)*np.ones((15,15))
+  print(kernel.shape)
+  img = cv2.imread('../data/gray_img.png')
+  img_gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+  plt.imshow(convol2d(img_gray, kernel))
+  plt.savefig('../data/blurred_image')
   ```
   
    ![](/data/blurred_image.png)
