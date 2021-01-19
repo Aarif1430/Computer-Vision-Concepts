@@ -12,7 +12,6 @@ img = cv2.imread('../data/Lenna.jpg')
 ################### Add noise to Image ##########################
 # Convert to gray scale
 
-
 def sp_noise(image, prob):
     """
     Add salt and pepper noise to image

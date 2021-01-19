@@ -66,4 +66,27 @@ Original Image             |  Noisy Image
   
     <img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\large&space;f^{*}&space;h=\sum_{k}&space;\sum_{l}&space;f(k,&space;l)&space;h(i-k,&space;j-l)" title="\large f^{*} h=\sum_{k} \sum_{l} f(k, l) h(i-k, j-l)" />
 
-    ![](/data/convolution.png) 
+    ![](/data/convolution.png)
+  
+- ## Convolution from scratch using numpy
+  ```python
+  import numpy as np
+  def convolution_2d(image, kernel):
+      flipped_kernel = np.fliplr(np.flipud(kernel))
+      padded_image = np.zeros((image.shape[0]+2, image.shape[1]+2))
+      padded_image[1:-1,1:-1] = image
+      result = np.zeros(image.shape)
+      x = kernel.shape[0]
+      y = kernel.shape[1]
+      for r in range(image.shape[0]-x):
+              for c in range(image.shape[1]-y):
+                  rc = kernel * padded_image[r:x+r, c:y+c]
+                  result[r, c] = rc.sum()
+      return result
+  ```
+   ![](/data/blurred_image.png)
+
+
+
+  
+  
