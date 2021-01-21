@@ -93,6 +93,17 @@ Original Image             |  Noisy Image
   
    ![](/data/blurred_image.png)
 
+## Marr Hildreth Edge Detector
+
+- ### Gaussian Smoothing
+  
+  - ### Laplacian 
+    <img src="https://latex.codecogs.com/gif.latex?\Delta&space;^2&space;S&space;=&space;\frac&space;{\partial}{\partial{x^2}}(S)&space;&plus;&space;\frac&space;{\partial}{\partial{y^2}}(S)" title="\Delta ^2 S = \frac {\partial}{\partial{x^2}}(S) + \frac {\partial}{\partial{y^2}}(S)" />
+  
+  - ### Laplacian of Gaussian
+    <img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\large&space;\Delta&space;^2&space;S&space;=&space;\Delta&space;^2&space;(g&space;*&space;I)&space;=&space;(\Delta&space;^2&space;g)*I" title="\large \Delta ^2 S = \Delta ^2 (g * I) = (\Delta ^2 g)*I" />
+
+
 
 
   
