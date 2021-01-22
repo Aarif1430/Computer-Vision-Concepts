@@ -1,4 +1,4 @@
-from imports.imports import *
+from imports import *
 
 img = cv2.imread('../data/Lenna.jpg')
 #

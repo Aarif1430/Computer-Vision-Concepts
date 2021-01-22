@@ -103,10 +103,18 @@ Original Image             |  Noisy Image
   - ### Laplacian of Gaussian
     <img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\large&space;\Delta&space;^2&space;S&space;=&space;\Delta&space;^2&space;(g&space;*&space;I)&space;=&space;(\Delta&space;^2&space;g)*I" title="\large \Delta ^2 S = \Delta ^2 (g * I) = (\Delta ^2 g)*I" />
     <br>
-    <img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\fn_jvn&space;\LARGE&space;\Delta&space;^2&space;g&space;=&space;\frac&space;{1}{\sqrt{2\pi}\sigma^3}[2&space;-&space;\frac&space;{x^2&space;&plus;&space;y^2}{\sigma^2}]e^{\frac{x^2&space;&plus;&space;y^2}{2\sigma^2}}" title="\LARGE \Delta ^2 g = \frac {1}{\sqrt{2\pi}\sigma^3}[2 - \frac {x^2 + y^2}{\sigma^2}]e^{\frac{x^2 + y^2}{2\sigma^2}}" />
+    <img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\fn_jvn&space;\large&space;\Delta&space;^2&space;g&space;=&space;\frac&space;{1}{\sqrt{2\pi}\sigma^3}[2&space;-&space;\frac&space;{x^2&space;&plus;&space;y^2}{\sigma^2}]e^{\frac{x^2&space;&plus;&space;y^2}{2\sigma^2}}" title="\large \Delta ^2 g = \frac {1}{\sqrt{2\pi}\sigma^3}[2 - \frac {x^2 + y^2}{\sigma^2}]e^{\frac{x^2 + y^2}{2\sigma^2}}" />
 
+  - ### Separability
+    ![](/data/Separability.png)
 
-
-
+  ## Laplacian Gaussian Edge Detector
+  - Computer LOG
+  - Find Zero_Crossings from each row
+  - Find slope of Zero-Crossing
+  - Apply threshold to slope and mark edges
+  
+## Canny Edge Detector
+  
   
   
