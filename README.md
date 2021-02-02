@@ -115,6 +115,14 @@ Original Image             |  Noisy Image
   - Apply threshold to slope and mark edges
   
 ## Canny Edge Detector
-  
+  ### Steps
+  - Smooth image with gaussian filter
+    
+    <a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;\fn_jvn&space;S&space;=&space;I&space;*&space;g(x,y)&space;=&space;g(x,y)*I;&space;\thickspace&space;where,&space;g(x,y)&space;=&space;\frac&space;{1}{\sqrt{2\pi\sigma}}&space;e&space;^{\frac&space;{x^2&plus;y^2}{2\sigma^2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\fn_jvn&space;S&space;=&space;I&space;*&space;g(x,y)&space;=&space;g(x,y)*I;&space;\thickspace&space;where,&space;g(x,y)&space;=&space;\frac&space;{1}{\sqrt{2\pi\sigma}}&space;e&space;^{\frac&space;{x^2&plus;y^2}{2\sigma^2}}" title="S = I * g(x,y) = g(x,y)*I; \thickspace where, g(x,y) = \frac {1}{\sqrt{2\pi\sigma}} e ^{\frac {x^2+y^2}{2\sigma^2}}" /></a>
+    
+  - Compute derivative of filtered image
+  - Find magnitude and orientation of gradient
+  - Apply "Non-maximum Suppression"
+  - Apply "Hysteresis Threshold"
   
   
