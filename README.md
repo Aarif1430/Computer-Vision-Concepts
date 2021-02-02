@@ -118,11 +118,41 @@ Original Image             |  Noisy Image
   ### Steps
   - Smooth image with gaussian filter
     
-    <a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;\fn_jvn&space;S&space;=&space;I&space;*&space;g(x,y)&space;=&space;g(x,y)*I;&space;\thickspace&space;where,&space;g(x,y)&space;=&space;\frac&space;{1}{\sqrt{2\pi\sigma}}&space;e&space;^{\frac&space;{x^2&plus;y^2}{2\sigma^2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\fn_jvn&space;S&space;=&space;I&space;*&space;g(x,y)&space;=&space;g(x,y)*I;&space;\thickspace&space;where,&space;g(x,y)&space;=&space;\frac&space;{1}{\sqrt{2\pi\sigma}}&space;e&space;^{\frac&space;{x^2&plus;y^2}{2\sigma^2}}" title="S = I * g(x,y) = g(x,y)*I; \thickspace where, g(x,y) = \frac {1}{\sqrt{2\pi\sigma}} e ^{\frac {x^2+y^2}{2\sigma^2}}" /></a>
+    <a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;\fn_jvn&space;S&space;=&space;I&space;*&space;g(x,y)&space;=&space;g(x,y)*I;&space;\thickspace&space;where,&space;g(x,y)&space;=&space;\frac&space;{1}{\sqrt{2\pi\sigma}}&space;e&space;^-({\frac&space;{x^2&plus;y^2}{2\sigma^2}})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\fn_jvn&space;S&space;=&space;I&space;*&space;g(x,y)&space;=&space;g(x,y)*I;&space;\thickspace&space;where,&space;g(x,y)&space;=&space;\frac&space;{1}{\sqrt{2\pi\sigma}}&space;e&space;^-({\frac&space;{x^2&plus;y^2}{2\sigma^2}})" title="S = I * g(x,y) = g(x,y)*I; \thickspace where, g(x,y) = \frac {1}{\sqrt{2\pi\sigma}} e ^-({\frac {x^2+y^2}{2\sigma^2}})" /></a>
     
   - Compute derivative of filtered image
+    
+    <a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;\fn_jvn&space;\nabla&space;=&space;\nabla&space;(g*I)&space;=&space;(\nabla&space;g)&space;*&space;I" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\fn_jvn&space;\nabla&space;=&space;\nabla&space;(g*I)&space;=&space;(\nabla&space;g)&space;*&space;I" title="\nabla = \nabla (g*I) = (\nabla g) * I" /></a>
+
   - Find magnitude and orientation of gradient
+  
+    <a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;\fn_jvn&space;\nabla&space;=&space;\nabla&space;(g*I)&space;=&space;(\nabla&space;g)&space;*&space;I" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\fn_jvn&space;\nabla&space;=&space;\nabla&space;(g*I)&space;=&space;(\nabla&space;g)&space;*&space;I" title="\nabla = \nabla (g*I) = (\nabla g) * I" /></a>  
+
   - Apply "Non-maximum Suppression"
   - Apply "Hysteresis Threshold"
+  ### Dervative of a gaussian filter w.r.t x and y
+  ```python
+    def plot_gaussian_derivative(der):
+        x = np.linspace(-10, 10, num=100)
+        y = np.linspace(-10, 10, num=100)
+    
+        x, y = np.meshgrid(x, y)
+    
+        z = np.exp(-0.1 * x ** 2 - 0.1 * y ** 2)
+        dzdx = -0.2*x*np.exp(-0.1 * x ** 2 - 0.1 * y ** 2)
+        dzdy = -0.2 * y * np.exp(-0.1 * x ** 2 - 0.1 * y ** 2)
+        z = dzdx if der == 'dx' else dzdy
+    
+        print(x[:-1].shape)
+        fig = plt.figure()
+        ax = fig.add_subplot(111, projection='3d')
+        ax.plot_surface(x, y, z, cmap=cm.jet)
+        plt.savefig('../data/gauss_2d_der.png')
+        plt.show()
+```
+
+  Derivative w.r.t x              |  Derivative w.r.t y
+  :-------------------------:|:-------------------------:
+  ![](/data/gauss_2d_dx.png)  |  ![](/data/gauss_2d_dy.png)
   
   

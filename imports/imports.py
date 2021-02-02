@@ -5,4 +5,6 @@ import seaborn as sns
 from scipy import stats
 from matplotlib import cm
 import random
+from numpy import diff
+
 sns.set()
