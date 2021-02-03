@@ -126,7 +126,7 @@ Original Image             |  Noisy Image
 
   - Find magnitude and orientation of gradient
   
-    <a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;\fn_jvn&space;\nabla&space;=&space;\nabla&space;(g*I)&space;=&space;(\nabla&space;g)&space;*&space;I" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\fn_jvn&space;\nabla&space;=&space;\nabla&space;(g*I)&space;=&space;(\nabla&space;g)&space;*&space;I" title="\nabla = \nabla (g*I) = (\nabla g) * I" /></a>  
+    <a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;\fn_jvn&space;magnitude&space;=&space;\sqrt&space;{{S_x}^2&space;&plus;&space;{S_y}^2}&space;\\&space;direction&space;=&space;\theta&space;=&space;\tan^{-1}&space;\frac{S_y}{S_x}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\fn_jvn&space;magnitude&space;=&space;\sqrt&space;{{S_x}^2&space;&plus;&space;{S_y}^2}&space;\\&space;direction&space;=&space;\theta&space;=&space;\tan^{-1}&space;\frac{S_y}{S_x}" title="magnitude = \sqrt {{S_x}^2 + {S_y}^2} \\ direction = \theta = \tan^{-1} \frac{S_y}{S_x}" /></a>  
 
   - Apply "Non-maximum Suppression"
   - Apply "Hysteresis Threshold"
